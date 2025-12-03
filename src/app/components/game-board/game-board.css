@@ -1,8 +1,7 @@
 .game-board {
   border: 1px solid transparent;
-
-  margin-top: 35px;
-  margin-left: 35px;
+  background-color: #dcb35c; /* Fond bois plateau de Go */
+  padding: 35px; /* Padding uniforme autour de la grille */
 
   .row {
     display: flex;
