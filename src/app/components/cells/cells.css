@@ -3,7 +3,7 @@
   position: absolute;
 
   .row {
-      display: flex;
+    display: flex;
 
     .clicable-cell {
       width: 70px;

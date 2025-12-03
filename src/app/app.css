@@ -1,3 +1,35 @@
-.game-container {
-  background: red;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+
+  .header-game {
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+
+    .actions {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      button {
+        padding: 10px 10px;
+        border-radius: 20px;
+        border: none;
+        background-color: #d4d4d4; ;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .global-info {
+    border: #817272 2px solid;
+    width: 25%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
