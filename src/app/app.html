@@ -2,6 +2,19 @@
   <div class="header-game">
     <h1>My Go Game</h1>
 
+    <div class="info-game">
+      <details>
+        <summary class="info-bubble">i</summary>
+        <div class="info-panel">
+          <p><strong>Left click:</strong> places a stone of your color on an empty spot</p>
+          <p><strong>Right click:</strong> removes an opponent's stone and increases your score</p>
+          <p><strong>"End Turn" button:</strong> switches to the next player</p>
+          <p><strong>"Pass" button:</strong> if both players pass consecutively, the game ends.</p>
+        </div>
+      </details>
+    </div>
+
+
     <div class="global-info">
       Current player : {{ currentPlayer() }}
 

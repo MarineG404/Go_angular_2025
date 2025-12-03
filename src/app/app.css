@@ -13,6 +13,49 @@
       color: var(--primary);
     }
 
+    .info-game {
+      margin-top: 10px;
+
+      details {
+        position: relative;
+        display: inline-block;
+      }
+
+      .info-bubble {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--secondary);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .info-panel {
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--background);
+        border: 1px solid var(--accent);
+        border-radius: 10px;
+        padding: 15px;
+        width: 300px;
+        box-shadow: 0 4px 8px #0000001a;
+        z-index: 10;
+
+        p {
+          margin: 0;
+          margin-bottom: 10px;
+          color: var(--text);
+        }
+      }
+
+    }
+
     .actions {
       margin-top: 10px;
       display: flex;
