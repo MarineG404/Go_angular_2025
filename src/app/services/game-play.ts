@@ -16,7 +16,7 @@ export class GamePlay {
   pass() {
     this.currentPlayer.update(p => (p === 'player1' ? 'player2' : 'player1'));
     this.passedTurns++;
-    if (this.passedTurns >= 3) {
+    if (this.passedTurns >= 2) {
       this.end = true;
     }
   }
