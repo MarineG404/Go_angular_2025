@@ -9,6 +9,10 @@
     margin-top: 10px;
     text-align: center;
 
+    h1 {
+      color: var(--primary);
+    }
+
     .actions {
       margin-top: 10px;
       display: flex;
@@ -19,18 +23,18 @@
         padding: 10px 10px;
         border-radius: 20px;
         border: none;
-        background-color: #d4d4d4; ;
+        background-color: var(--secondary);
         cursor: pointer;
       }
     }
-  }
 
-  .global-info {
-    border: #817272 2px solid;
-    width: 25%;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 10px;
+    .global-info {
+      border: var(--accent) 2px solid;
+      width: 25%;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 10px;
+    }
   }
 
   /* grid superposition */

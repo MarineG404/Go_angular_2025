@@ -1,6 +1,30 @@
+:root {
+  --text: #1a1a1a;
+  --background: #f5f5f0;
+  --primary: #2c5f2d;
+  --secondary: #97c4a3;
+  --accent: #d4a574;
+  --navbar-background: #f5f5f0d9;
+  --game-board-background: #b8935f;
+  --grid-line: #000000;
+}
+
+[data-theme='dark'] {
+  --text: #e8e8e8;
+  --background: #1a1a1a;
+  --primary: #4a9d4e;
+  --secondary: #2d5f30;
+  --accent: #d4a574;
+  --navbar-background: #1a1a1ad9;
+  --game-board-background: #8b6f47;
+  --grid-line: #000000;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   width: 100%;
   height: 100%;
+  color: var(--text);
+  background: var(--background);
 }

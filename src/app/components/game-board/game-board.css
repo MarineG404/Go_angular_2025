@@ -1,7 +1,8 @@
 .game-board {
   border: 1px solid transparent;
-  background-color: #dcb35c; /* Fond bois plateau de Go */
-  padding: 35px; /* Padding uniforme autour de la grille */
+  background-color: var(--game-board-background);
+  padding: 35px;
+  border-radius: 15px;
 
   .row {
     display: flex;
@@ -9,14 +10,10 @@
     .display-cell {
       width: 70px;
       height: 70px;
-      border: 1px solid #000000;
+      border: 1px solid var(--grid-line);
       display: flex;
       align-items: center;
       justify-content: center;
     }
   }
 }
-
-
-
-
