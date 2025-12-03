@@ -1,1 +1,11 @@
-<p>game-board works!</p>
+<div class="game-board">
+	@for (row of board; track $index; let i = $index) {
+		<div class="row">
+			@for (cell of row; track $index; let j = $index) {
+				<div class="display-cell">
+					{{ cell }}
+				</div>
+			}
+		</div>
+	}
+</div>

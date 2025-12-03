@@ -4,8 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-game-board',
   imports: [],
   templateUrl: './game-board.html',
-  styleUrl: './game-board.css',
+  styleUrls: ['./game-board.css'],
 })
 export class GameBoard {
+
+	// Tableau de jeu 8*8
+	board: string[][] = Array.from({ length: 8 }, () => Array.from({ length: 8 }, () => ''));
 
 }
