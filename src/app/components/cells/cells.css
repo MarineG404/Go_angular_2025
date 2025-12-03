@@ -1,6 +1,5 @@
 .interactive-game-board {
   border: 1px solid transparent;
-  position: absolute;
 
   .row {
     display: flex;

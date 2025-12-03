@@ -1,10 +1,8 @@
 .game-board {
-  border: 1px solid #000000;
-  position: absolute;
-  margin-left: 35px;
-  margin-top: 35px;
+  border: 1px solid transparent;
 
-  flex : 1;
+  margin-top: 35px;
+  margin-left: 35px;
 
   .row {
     display: flex;

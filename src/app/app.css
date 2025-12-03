@@ -32,4 +32,19 @@
     padding: 10px;
     border-radius: 10px;
   }
+
+  /* grid superposition */
+  .game-container {
+    display: grid;
+    justify-content: center;
+
+    app-game-board,
+    app-cells {
+      grid-area: 1 / 1;
+    }
+
+    app-cells {
+      z-index: 1;
+    }
+  }
 }
