@@ -89,6 +89,25 @@
     }
   }
 
+  .game-over {
+    text-align: center;
+    margin: auto;
+    border : var(--primary) 2px solid;
+    border-radius: 20px;
+    width: 30%;
+    padding: 10px;
+
+    button {
+      border-radius: 20px;
+      font-size: large;
+      border: none;
+      background-color: var(--secondary);
+      cursor: pointer;
+      margin-top: 10px ;
+      padding: 10px 20px;
+    }
+  }
+
   /* grid superposition */
   .game-container {
     display: grid;

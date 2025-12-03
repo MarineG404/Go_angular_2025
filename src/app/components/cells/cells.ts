@@ -20,6 +20,7 @@ export class Cells {
     if (!this.board[i] || !this.board[i][j]) {
       this.board[i][j] = this.gamePlay.currentPlayer();
     }
+    this.gamePlay.passedTurns = 0;
     const value = this.board[i][j];
     this.cellClick.emit({ i, j, value });
   }
@@ -34,6 +35,7 @@ export class Cells {
       this.board[i][j] = '';
       this.cellClick.emit({ i, j, value: '' });
       this.gamePlay.addScore(current, 1);
+      this.gamePlay.passedTurns = 0;
     }
   }
 }

@@ -28,6 +28,18 @@ export class App {
   }
 
   showScores() {
-    return this.gamePlay.showScores();
+    return this.gamePlay.scores();
+  }
+
+  endGame() {
+    return this.gamePlay.end;
+  }
+
+  resetGame() {
+    this.gamePlay.resetGame();
+  }
+
+  getWinner() {
+    return this.gamePlay.getWinner();
   }
 }
