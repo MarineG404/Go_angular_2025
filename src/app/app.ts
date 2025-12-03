@@ -16,7 +16,7 @@ export class App {
   constructor(private gamePlay: GamePlay) {  }
 
   currentPlayer() {
-    return this.gamePlay.currentPlayer;
+    return this.gamePlay.currentPlayer();
   }
 
   pass() {
@@ -25,5 +25,9 @@ export class App {
 
   endTurn() {
     this.gamePlay.endTurn();
+  }
+
+  showScores() {
+    return this.gamePlay.showScores();
   }
 }

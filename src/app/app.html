@@ -3,8 +3,17 @@
     <h1>My Go Game</h1>
 
     <div class="global-info">
-      <p> Current player : {{ currentPlayer() }} </p>
-      <p> Score : </p>
+      Current player : {{ currentPlayer() }}
+
+      <div class="scores-table">
+        <div class="scores-item">
+          Player 1 : {{ showScores()['player1'] }}
+        </div>
+        <div class="scores-item">
+          Player 2 : {{ showScores()['player2'] }}
+        </div>
+      </div>
+
      </div>
 
     <div class="actions">

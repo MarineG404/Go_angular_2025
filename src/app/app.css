@@ -20,8 +20,9 @@
       gap: 10px;
 
       button {
-        padding: 10px 10px;
+        padding: 10px 20px;
         border-radius: 20px;
+        font-size: large;
         border: none;
         background-color: var(--secondary);
         cursor: pointer;
@@ -32,8 +33,16 @@
       border: var(--accent) 2px solid;
       width: 25%;
       margin: 10px auto;
-      padding: 10px;
       border-radius: 10px;
+      padding: 10px;
+
+      .scores-table {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
     }
   }
 
