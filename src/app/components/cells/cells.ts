@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './cells.css',
 })
 export class Cells {
-
+  board: string[][] = Array.from({ length: 9 }, () => Array.from({ length: 9 }, () => ''));
 }
