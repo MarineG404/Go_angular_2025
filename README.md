@@ -1,59 +1,66 @@
-# Go2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+# Go2 — Angular Go Board Prototype
+
+This repository contains a small Angular application (prototype) for a Go-like board game. It demonstrates a playable board UI, simple game state management using Angular Signals, save/load/export of games, and a small admin page to manage saved parties.
+
+This README explains how to set up the project locally, run the dev server, and use the main features.
+
+## Prerequisites
+
+- Node.js (v18+ recommended)
+- npm (v9+ recommended)
+- Angular CLI (optional, you can use the local `ng` via npm scripts)
+
+Check your versions:
+
+```bash
+node -v
+npm -v
+```
+
+If you have Angular CLI installed globally, you can use `ng` commands. Otherwise use the project scripts (npm run).
+
+## Install
+
+From the project root:
+
+```bash
+npm install
+```
 
 ## Development server
 
-To start a local development server, run:
+Start the dev server and open the app in your browser:
 
 ```bash
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open http://localhost:4200/ — the app reloads on file changes.
 
-## Code scaffolding
+## Available scripts
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `npm start` — runs `ng serve` (dev server)
 
-```bash
-ng generate component component-name
-```
+Check `package.json` for details.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Features / How to use
 
-```bash
-ng generate --help
-```
+- Play the board: left-click to place a stone for the current player; right-click removes an opponent's stone (and increases your score).
+- Theme toggle: use the button in the header to switch light/dark theme. The app stores the theme in `localStorage` and sets `data-theme` on the `<html>` element.
+- Save / Load:
+	- `Save Game` downloads the current game as `go-game-save.json`.
+	- `Load Game` lets you pick a previously exported JSON file to restore the game state.
+	- `Sauvegarder la partie` saves the current state to the app's internal list of parties (stored in `localStorage`).
+	- `Voir les parties` opens the Parties page where you can load or delete previously saved parties.
 
-## Building
+## Saving / Parties
 
-To build the project run:
+The `GamePlay` service manages a list of saved parties in `localStorage` under the key `go-parties-list`. Each saved party stores a snapshot of the board, current player, scores and metadata (date, id). Use the `Parties` page to manage them.
 
-```bash
-ng build
-```
+## Export / Import JSON
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Export: the app serializes the game state to an indented JSON string so you can store it or share it.
+- Import: choose a valid `go-game-save.json` exported from this app to restore the board and scores.
