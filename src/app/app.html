@@ -3,13 +3,13 @@
     <h1>My Go Game</h1>
 
     <div class="global-info">
-      <p> Current player :  </p>
+      <p> Current player : {{ currentPlayer() }} </p>
       <p> Score : </p>
      </div>
 
     <div class="actions">
-      <button> End of turn</button>
-      <button> Change player</button>
+      <button (click)="endTurn()"> End of turn</button>
+      <button (click)="pass()"> Pass turn</button>
     </div>
   </div>
 

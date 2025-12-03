@@ -1,11 +1,16 @@
 <div class="interactive-game-board">
-	@for (row of board; track $index; let i = $index) {
-		<div class="row">
-			@for (cell of row; track $index; let j = $index) {
-				<div class="clicable-cell">
-					{{ cell }}
-				</div>
-			}
-		</div>
-	}
+  @for (row of board; track $index; let i = $index) {
+    <div class="row">
+      @for (cell of row; track $index; let j = $index) {
+        <div class="clicable-cell" (click)="clickCell(i, j)">
+          @if (cell === 'player1') {
+            <div class="player1"></div>
+          }
+          @if (cell === 'player2') {
+            <div class="player2"></div>
+          }
+        </div>
+      }
+    </div>
+  }
 </div>
