@@ -1,0 +1,78 @@
+.parties-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+
+  .no-parties {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid var(--accent);
+      color: var(--text);
+    }
+
+    th {
+      background: var(--secondary);
+      font-weight: bold;
+    }
+
+    tr:hover td {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 8px 14px;
+      border-radius: 16px;
+      border: none;
+      background: var(--secondary);
+      color: var(--text);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &.delete {
+        background: #e74c3c;
+        color: white;
+      }
+    }
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.1em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
