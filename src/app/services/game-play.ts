@@ -13,8 +13,12 @@ export class GamePlay {
 
   constructor() {}
 
-  pass() {
+  switchPlayer() {
     this.currentPlayer.update(p => (p === 'player1' ? 'player2' : 'player1'));
+  }
+
+  pass() {
+    this.switchPlayer();
     this.passedTurns++;
     if (this.passedTurns >= 2) {
       this.end = true;
@@ -22,7 +26,7 @@ export class GamePlay {
   }
 
   endTurn() {
-    this.pass();
+    this.switchPlayer();
   }
 
   addScore(player: string, points: number) {

@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { GameBoard } from "./components/game-board/game-board";
 import { Cells } from "./components/cells/cells";
 import { GamePlay } from './services/game-play';
+import { ThemeToggle } from "./components/theme-toggle/theme-toggle";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, GameBoard, Cells],
+  imports: [RouterOutlet, GameBoard, Cells, ThemeToggle],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

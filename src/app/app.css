@@ -69,6 +69,7 @@
         border: none;
         background-color: var(--secondary);
         cursor: pointer;
+        color: var(--text);
       }
     }
 

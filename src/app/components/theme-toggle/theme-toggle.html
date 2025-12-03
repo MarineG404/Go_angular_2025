@@ -1,0 +1,10 @@
+<!-- Dans ton template -->
+@if (isDarkTheme) {
+  <a (click)="toggleTheme()">
+    <i class="ri-moon-line" aria-hidden="true"></i>
+  </a>
+} @else {
+  <a (click)="toggleTheme()">
+    <i class="ri-sun-line" aria-hidden="true"></i>
+  </a>
+}
