@@ -73,6 +73,6 @@ export class Home {
   saveParty() {
     const id = this.gamePlay.savePartyToList('Player 1', 'Player 2');
     console.log('Party saved with ID:', id);
-    alert('Partie sauvegardée !');
+    alert('Party saved!');
   }
 }

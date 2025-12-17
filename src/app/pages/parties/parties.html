@@ -1,8 +1,8 @@
 <div class="parties-container">
-  <h2>Parties sauvegardées</h2>
+  <h2>Saved Parties</h2>
 
   @if (parties.length === 0) {
-    <p class="no-parties">Aucune partie sauvegardée.</p>
+    <p class="no-parties">No saved parties.</p>
   } @else {
     <table>
       <thead>
@@ -22,8 +22,8 @@
             <td>{{ party.player2 }}</td>
             <td>{{ party.state.scores['player1'] }} - {{ party.state.scores['player2'] }}</td>
             <td class="actions">
-              <button (click)="charge(party.id)"><i class="ri-play-line"></i> Charger</button>
-              <button class="delete" (click)="deleteParty(party.id)"><i class="ri-delete-bin-line"></i> Supprimer</button>
+              <button (click)="charge(party.id)"><i class="ri-play-line"></i> Load</button>
+              <button class="delete" (click)="deleteParty(party.id)"><i class="ri-delete-bin-line"></i>Delete</button>
             </td>
           </tr>
         }
@@ -31,5 +31,5 @@
     </table>
   }
 
-  <a routerLink="/" class="back-link"><i class="ri-arrow-left-line"></i> Retour au jeu</a>
+  <a routerLink="/" class="back-link"><i class="ri-arrow-left-line"></i> Back to game</a>
 </div>
