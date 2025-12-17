@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class GameBoard {
 
-	// Tableau de jeu 8*8
+	// Initialize empty 8x8 board
 	board: string[][] = Array.from({ length: 8 }, () => Array.from({ length: 8 }, () => ''));
 
 }

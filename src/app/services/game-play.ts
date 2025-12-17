@@ -26,6 +26,7 @@ export class GamePlay {
   passedTurns: number = 0;
   end: boolean = false;
 
+  // Keys for localStorage
   private readonly STORAGE_KEY = 'go-game-save';
   private readonly PARTIES_KEY = 'go-parties-list';
 
@@ -88,6 +89,7 @@ export class GamePlay {
     return false;
   }
 
+  // ========= GAME STATE MANAGEMENT ==========
   resetGame() {
     this.board.set(this.createEmptyBoard());
     this.scores.set({ player1: 0, player2: 0 });

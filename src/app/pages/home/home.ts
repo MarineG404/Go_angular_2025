@@ -43,6 +43,7 @@ export class Home {
     return this.gamePlay.getWinner();
   }
 
+  // File operations for saving/loading game state
   saveGameToFile() {
     const json = this.gamePlay.exportGame();
     const blob = new Blob([json], { type: 'application/json' });

@@ -12,6 +12,7 @@ export class ThemeToggle implements OnInit {
 
   isDarkTheme: boolean = this.getCurrentTheme() === 'dark';
 
+  // Initialize theme on component load
   ngOnInit(): void {
     const stored = localStorage.getItem('theme');
     if (stored === 'dark' || stored === 'light') {
@@ -19,13 +20,15 @@ export class ThemeToggle implements OnInit {
     }
   }
 
+  // Toggle between dark and light themes
   toggleTheme() {
     const current = this.getCurrentTheme();
     const next = current === 'dark' ? 'light' : 'dark';
     this.setTheme(next);
-    this.isDarkTheme = !this.isDarkTheme; // Ajoute cette ligne
+    this.isDarkTheme = !this.isDarkTheme;
   }
 
+  // Get the current theme
   getCurrentTheme(): 'dark' | 'light' {
     const attr = document.documentElement.getAttribute('data-theme');
     if (attr === 'dark' || attr === 'light') return attr;
@@ -33,6 +36,7 @@ export class ThemeToggle implements OnInit {
     return stored === 'dark' ? 'dark' : 'light';
   }
 
+  // Set the theme
   private setTheme(theme: 'dark' | 'light') {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);

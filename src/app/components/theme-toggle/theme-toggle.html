@@ -1,10 +1,13 @@
-<!-- Dans ton template -->
 @if (isDarkTheme) {
+  <!-- Dark theme icon -->
   <a (click)="toggleTheme()">
     <i class="ri-moon-line" aria-hidden="true"></i>
   </a>
+
 } @else {
+  <!-- Light theme icon -->
   <a (click)="toggleTheme()">
     <i class="ri-sun-line" aria-hidden="true"></i>
   </a>
+
 }

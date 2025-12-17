@@ -23,6 +23,7 @@ export class Parties implements OnInit {
     this.parties = this.gamePlay.getParties();
   }
 
+  // Load selected party and navigate to game
   charge(id: string) {
     if (this.gamePlay.loadPartyById(id)) {
       // navigate back to game
@@ -32,6 +33,7 @@ export class Parties implements OnInit {
     }
   }
 
+  // Delete a party by ID
   deleteParty(id: string) {
     if (this.gamePlay.deletePartyById(id)) {
       this.loadParties(); // refresh list

@@ -12,12 +12,15 @@ import { GamePlay } from '../../services/game-play';
 export class Cells {
   constructor(private gamePlay: GamePlay) {}
 
+  // Get current board state
   get board() {
     return this.gamePlay.board();
   }
 
+  // Emit event on cell click
   @Output() cellClick = new EventEmitter<{ i: number; j: number; value: string }>();
 
+  // Handle left click on a cell
   clickLeftCell(i: number, j: number) {
     if (this.gamePlay.placeStone(i, j)) {
       const value = this.board[i][j];
@@ -25,6 +28,7 @@ export class Cells {
     }
   }
 
+  // Handle right click on a cell
   clickRightCell(i: number, j: number, ev: MouseEvent) {
     ev.preventDefault();
     const valueBefore = this.board?.[i]?.[j];

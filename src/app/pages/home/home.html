@@ -1,6 +1,8 @@
 <div class="page-container">
   <div class="header-game">
     <h1>My Go Game <app-theme-toggle></app-theme-toggle> </h1>
+    
+    <!-- Game action rules -->
     <div class="info-game">
       <details>
         <summary class="info-bubble">i</summary>
@@ -13,6 +15,8 @@
       </details>
     </div>
 
+
+    <!-- Game action info -->
     <div class="global-info">
       Current player : {{ currentPlayer() }}
 
@@ -26,6 +30,7 @@
       </div>
     </div>
 
+    <!-- Game action buttons -->
     @if (!endGame()){
       <div class="actions">
         <button (click)="endTurn()"> End of turn</button>
@@ -44,6 +49,7 @@
     }
   </div>
 
+  <!-- If game is over -->
   @if (endGame()) {
     <div class="game-over">
       Game Over! Winner: {{getWinner()}}
@@ -51,6 +57,7 @@
     </div>
   }
 
+  <!-- If game is not over -->
   @if (!endGame()) {
     <div class="game-container">
       <app-game-board></app-game-board>
